@@ -10,7 +10,7 @@ public class LogicaClasificacion {
      * Invierte una cadena de texto utilizando una pila (Stack).
      *
      * @param texto Cadena original a invertir.
-     * @return Cadena invertida.
+     * @return Cadena invertida
      *
      *         Ejemplo:
      *         Entrada: "Hola Mundo"
@@ -37,7 +37,7 @@ public class LogicaClasificacion {
 
     /**
      * Verifica si los símbolos de paréntesis, corchetes y llaves están bien
-     * balanceados.
+     * balanceados
      *
      * @param expresion Cadena con símbolos.
      * @return true si está balanceada, false en caso contrario.
