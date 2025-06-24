@@ -4,6 +4,8 @@ import java.util.*;
 
 public class LogicaClasificacion {
 
+    
+
     /**
      * Invierte una cadena de texto utilizando una pila (Stack).
      *
@@ -15,7 +17,22 @@ public class LogicaClasificacion {
      *         Salida: "odnuM aloH"
      */
     public String invertirCadena(String texto) {
-        return "";
+
+        Stack<Character> pila = new Stack<>();
+        StringBuilder resultado = new StringBuilder();
+
+        for (char c : texto.toCharArray()) {
+            pila.push(c);
+        }
+
+        while (!pila.isEmpty()) {
+            resultado.append(pila.pop());
+        }
+
+        return resultado.toString();
+
+
+    
     }
 
     /**
@@ -30,7 +47,26 @@ public class LogicaClasificacion {
      *         Salida: true
      */
     public boolean validarSimbolos(String expresion) {
-        return false;
+
+        Stack<Character> pila = new Stack<>();
+        Map<Character, Character> pares = Map.of(
+            ')', '(', 
+            '}', '{', 
+            ']', '['
+        );
+
+        for (char c : expresion.toCharArray()) {
+            if (pares.containsValue(c)) {
+                pila.push(c);
+            } else if (pares.containsKey(c)) {
+                if (pila.isEmpty() || pila.pop() != pares.get(c)) {
+                    return false;
+                }
+            }
+        }
+
+        return pila.isEmpty();
+        
     }
 
     /**
@@ -43,7 +79,10 @@ public class LogicaClasificacion {
      *         Salida: [1, 2, 3, 4]
      */
     public List<Integer> ordenarPila(Stack<Integer> pila) {
-
+        Stack<Integer> num = new Stack<>();
+        
+            
+        
         return new ArrayList<>();
     }
 
